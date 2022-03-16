@@ -1,0 +1,13 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+$breakpoints: (
+  phone: 580px,
+  tablet: 1024px
+);
+
+// :root {
+.themeRoot {
+  --GW-BREAKPOINT-PHONE: #{map-get($breakpoints, phone)};
+  --GW-BREAKPOINT-TABLET: #{map-get($breakpoints, tablet)};
+}

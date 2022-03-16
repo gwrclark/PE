@@ -1,0 +1,46 @@
+{
+    "country": {
+        "code": "US",
+        "name": "United States"
+    },
+    "locales": {
+        "en_US": "English (US)"
+    },
+    "address": {
+        "fieldNames": [
+            "AddressLine3",
+            "AddressLine2",
+            "AddressLine1",
+            "State",
+            "Country",
+            "PostalCode",
+            "City",
+            "County"
+        ],
+        "pcfMode": "default",
+        "PostalCodeRegex": "[0-9]{5}(-[0-9]{4})?"
+    },
+    "phone": {
+        "UserDefaultPhoneCountry": "US",
+        "sample": "201-555-0123"
+    },
+    "name": {
+        "mode": "default",
+        "formatMode": "default",
+        "visibleFields": [
+            "Suffix",
+            "FirstName",
+            "Prefix",
+            "LastName",
+            "MiddleName",
+            "Name"
+        ]
+    },
+    "fallbackLocale": "en_US",
+    "currency": {
+        "symbol": "$",
+        "code": "usd",
+        "fractionSize": 2
+    },
+    "preferredLocale": "en_US"
+}

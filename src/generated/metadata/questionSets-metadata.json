@@ -1,0 +1,417 @@
+{
+    "PAPortal": {
+        "code": "PAPortal",
+        "orderedQuestions": [
+            {
+                "required": false,
+                "choices": [
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.True",
+                        "choiceCode": "true"
+                    },
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.False",
+                        "choiceCode": "false"
+                    }
+                ],
+                "questionType": "Boolean",
+                "filters": [],
+                "code": "q1",
+                "order": 0,
+                "displayKey": "questionkey.Question_PAPortal.q1.Text"
+            },
+            {
+                "required": false,
+                "choices": [
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.True",
+                        "choiceCode": "true"
+                    },
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.False",
+                        "choiceCode": "false"
+                    }
+                ],
+                "questionType": "Boolean",
+                "filters": [],
+                "code": "q2",
+                "order": 1,
+                "displayKey": "questionkey.Question_PAPortal.q2.Text"
+            },
+            {
+                "required": false,
+                "choices": [
+                    {
+                        "displayKey": "questionkey.QuestionChoice_ze0h0692grhjs5hiuimv4002caa.Name",
+                        "choiceCode": "yes"
+                    },
+                    {
+                        "displayKey": "questionkey.QuestionChoice_zepgc8mjcmpvo2lois4mpmp2fl8.Name",
+                        "choiceCode": "no"
+                    },
+                    {
+                        "displayKey": "questionkey.QuestionChoice_zcqic97nkbuke1j8msoavlk57p8.Name",
+                        "choiceCode": "nonew"
+                    }
+                ],
+                "questionType": "Choice",
+                "filters": [],
+                "code": "q3",
+                "order": 2,
+                "displayKey": "questionkey.Question_PAPortal.q3.Text"
+            },
+            {
+                "required": false,
+                "choices": [
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.True",
+                        "choiceCode": "true"
+                    },
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.False",
+                        "choiceCode": "false"
+                    }
+                ],
+                "questionType": "Boolean",
+                "filters": [],
+                "code": "q4",
+                "order": 3,
+                "displayKey": "questionkey.Question_PAPortal.q4.Text"
+            }
+        ],
+        "displayKey": "questionkey.QuestionSet_PAPortal.Name"
+    },
+    "PAPersonalAutoPreQual": {
+        "code": "PAPersonalAutoPreQual",
+        "orderedQuestions": [
+            {
+                "required": false,
+                "choices": [
+                    {
+                        "displayKey": "questionkey.QuestionChoice_wKgJFgdTaKwAAAAA.Name",
+                        "choiceCode": "notrenewed"
+                    },
+                    {
+                        "displayKey": "questionkey.QuestionChoice_wKgJFlgHZrIAAAAA.Name",
+                        "choiceCode": "yes"
+                    },
+                    {
+                        "displayKey": "questionkey.QuestionChoice_wKgJFtjsLj4AAAAA.Name",
+                        "choiceCode": "newdriver"
+                    },
+                    {
+                        "displayKey": "questionkey.QuestionChoice_wKgJFudb23cAAAAA.Name",
+                        "choiceCode": "notknown"
+                    }
+                ],
+                "questionType": "Choice",
+                "filters": [],
+                "code": "PACurrentlyInsured",
+                "order": 0,
+                "displayKey": "questionkey.Question_PAPersonalAutoPreQual.PACurrentlyInsured.Text"
+            },
+            {
+                "required": false,
+                "choices": [
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.True",
+                        "choiceCode": "true"
+                    },
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.False",
+                        "choiceCode": "false"
+                    }
+                ],
+                "questionType": "Boolean",
+                "filters": [],
+                "code": "CurrentSuspense",
+                "order": 1,
+                "displayKey": "questionkey.Question_PAPersonalAutoPreQual.CurrentSuspense.Text"
+            },
+            {
+                "required": false,
+                "choices": [
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.True",
+                        "choiceCode": "true"
+                    },
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.False",
+                        "choiceCode": "false"
+                    }
+                ],
+                "questionType": "Boolean",
+                "filters": [],
+                "code": "Suspense",
+                "order": 2,
+                "displayKey": "questionkey.Question_PAPersonalAutoPreQual.Suspense.Text"
+            },
+            {
+                "required": false,
+                "choices": [
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.True",
+                        "choiceCode": "true"
+                    },
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.False",
+                        "choiceCode": "false"
+                    }
+                ],
+                "questionType": "Boolean",
+                "filters": [],
+                "code": "MovingViolations2",
+                "order": 3,
+                "displayKey": "questionkey.Question_PAPersonalAutoPreQual.MovingViolations2.Text"
+            },
+            {
+                "required": true,
+                "choices": [],
+                "questionType": "String",
+                "filters": [
+                    {
+                        "answer": "true",
+                        "questionCode": "MovingViolations2"
+                    }
+                ],
+                "code": "DriverNameConviction",
+                "order": 4,
+                "displayKey": "questionkey.Question_PAPersonalAutoPreQual.DriverNameConviction.Text"
+            },
+            {
+                "required": false,
+                "choices": [
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.True",
+                        "choiceCode": "true"
+                    },
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.False",
+                        "choiceCode": "false"
+                    }
+                ],
+                "questionType": "Boolean",
+                "filters": [],
+                "code": "PriorDeclinedPolicy",
+                "order": 5,
+                "displayKey": "questionkey.Question_PAPersonalAutoPreQual.PriorDeclinedPolicy.Text"
+            }
+        ],
+        "displayKey": "questionkey.QuestionSet_PAPersonalAutoPreQual.Name"
+    },
+    "HOPPreQual": {
+        "code": "HOPPreQual",
+        "orderedQuestions": [
+            {
+                "required": true,
+                "choices": [
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.True",
+                        "choiceCode": "true"
+                    },
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.False",
+                        "choiceCode": "false"
+                    }
+                ],
+                "questionType": "Boolean",
+                "filters": [],
+                "code": "HOPPreQualDog",
+                "order": 0,
+                "displayKey": "questionkey.Question_HOPPreQual.HOPPreQualDog.Text"
+            },
+            {
+                "required": true,
+                "choices": [
+                    {
+                        "displayKey": "questionkey.QuestionChoice_z9sja4d0rn99map5372nmpj6l1b.Name",
+                        "choiceCode": "HOPPreQualDogBreedStaffordshireTerrier"
+                    },
+                    {
+                        "displayKey": "questionkey.QuestionChoice_zi3icch9h7neud1p5haks3uq2da.Name",
+                        "choiceCode": "HOPPreQualDogBreedPitBull"
+                    },
+                    {
+                        "displayKey": "questionkey.QuestionChoice_zjmiatrvj267a9roacdoljqu1v9.Name",
+                        "choiceCode": "HOPPreQualDogBreedBullTerrier"
+                    },
+                    {
+                        "displayKey": "questionkey.QuestionChoice_zeqj487l3lk5g79gb8ogv8ilpr9.Name",
+                        "choiceCode": "HOPPreQualDogBreedRottweiler"
+                    },
+                    {
+                        "displayKey": "questionkey.QuestionChoice_zdbh6leq1kahsejiv2mgkh1cgua.Name",
+                        "choiceCode": "HOPPreQualDogBreedDingo"
+                    },
+                    {
+                        "displayKey": "questionkey.QuestionChoice_ze1ja1q6n41624p0uhnq005ptnb.Name",
+                        "choiceCode": "HOPPreQualDogBreedChow"
+                    },
+                    {
+                        "displayKey": "questionkey.QuestionChoice_z1vhosbjj3l5ten6os4fkqqcc5b.Name",
+                        "choiceCode": "HOPPreQualDogBreedCanaryDog"
+                    },
+                    {
+                        "displayKey": "questionkey.QuestionChoice_zrjic38f8uc870e5k1fj0e6vp08.Name",
+                        "choiceCode": "HOPPreQualDogBreedMastiff"
+                    },
+                    {
+                        "displayKey": "questionkey.QuestionChoice_z5hiuuj57813jaqu0jat51baoe8.Name",
+                        "choiceCode": "HOPPreQualDogBreedOther"
+                    }
+                ],
+                "questionType": "Choice",
+                "filters": [
+                    {
+                        "answer": "true",
+                        "questionCode": "HOPPreQualDog"
+                    }
+                ],
+                "code": "HOPPreQualDogBreed",
+                "order": 1,
+                "displayKey": "questionkey.Question_HOPPreQual.HOPPreQualDogBreed.Text"
+            },
+            {
+                "required": true,
+                "choices": [
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.True",
+                        "choiceCode": "true"
+                    },
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.False",
+                        "choiceCode": "false"
+                    }
+                ],
+                "questionType": "Boolean",
+                "filters": [],
+                "code": "HOPPreQualPropVacant",
+                "order": 2,
+                "displayKey": "questionkey.Question_HOPPreQual.HOPPreQualPropVacant.Text"
+            },
+            {
+                "required": true,
+                "choices": [
+                    {
+                        "displayKey": "questionkey.QuestionChoice_z95imolo548rjbo1ru4or765bsa.Name",
+                        "choiceCode": "HOPPreQualOccupantTenant"
+                    },
+                    {
+                        "displayKey": "questionkey.QuestionChoice_zbrggeel5fb7f7n1uvnbgcbt3h9.Name",
+                        "choiceCode": "HOPPreQualOccupantMyself"
+                    }
+                ],
+                "questionType": "Choice",
+                "filters": [
+                    {
+                        "answer": "false",
+                        "questionCode": "HOPPreQualPropVacant"
+                    }
+                ],
+                "code": "HOPPreQualOccupant",
+                "order": 3,
+                "displayKey": "questionkey.Question_HOPPreQual.HOPPreQualOccupant.Text"
+            },
+            {
+                "required": true,
+                "choices": [
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.True",
+                        "choiceCode": "true"
+                    },
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.False",
+                        "choiceCode": "false"
+                    }
+                ],
+                "questionType": "Boolean",
+                "filters": [
+                    {
+                        "answer": "HOPPreQualOccupantMyself",
+                        "questionCode": "HOPPreQualOccupant"
+                    },
+                    {
+                        "answer": "false",
+                        "questionCode": "HOPPreQualPropVacant"
+                    }
+                ],
+                "code": "HOPPreQualOccupyFullTime",
+                "order": 4,
+                "displayKey": "questionkey.Question_HOPPreQual.HOPPreQualOccupyFullTime.Text"
+            },
+            {
+                "required": true,
+                "choices": [
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.True",
+                        "choiceCode": "true"
+                    },
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.False",
+                        "choiceCode": "false"
+                    }
+                ],
+                "questionType": "Boolean",
+                "filters": [
+                    {
+                        "answer": "false",
+                        "questionCode": "HOPPreQualPropVacant"
+                    },
+                    {
+                        "answer": "false",
+                        "questionCode": "HOPPreQualOccupyFullTime"
+                    },
+                    {
+                        "answer": "HOPPreQualOccupantMyself",
+                        "questionCode": "HOPPreQualOccupant"
+                    }
+                ],
+                "code": "HOPPreQualPrimaryResidenceInsurer",
+                "order": 5,
+                "displayKey": "questionkey.Question_HOPPreQual.HOPPreQualPrimaryResidenceInsurer.Text"
+            },
+            {
+                "required": true,
+                "choices": [
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.True",
+                        "choiceCode": "true"
+                    },
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.False",
+                        "choiceCode": "false"
+                    }
+                ],
+                "questionType": "Boolean",
+                "filters": [],
+                "code": "HOPPreQualSwimmingPool",
+                "order": 6,
+                "displayKey": "questionkey.Question_HOPPreQual.HOPPreQualSwimmingPool.Text"
+            },
+            {
+                "required": true,
+                "choices": [
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.True",
+                        "choiceCode": "true"
+                    },
+                    {
+                        "displayKey": "displaykey.Java.NameValueView.Boolean.False",
+                        "choiceCode": "false"
+                    }
+                ],
+                "questionType": "Boolean",
+                "filters": [
+                    {
+                        "answer": "true",
+                        "questionCode": "HOPPreQualSwimmingPool"
+                    }
+                ],
+                "code": "HOPPreQualSwimmingPoolFenced",
+                "order": 7,
+                "displayKey": "questionkey.Question_HOPPreQual.HOPPreQualSwimmingPoolFenced.Text"
+            }
+        ],
+        "displayKey": "questionkey.QuestionSet_HOPPreQual.Name"
+    }
+}

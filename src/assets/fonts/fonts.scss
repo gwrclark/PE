@@ -1,0 +1,8 @@
+$fonts-root: "/assets/fonts" !default;
+$source-sans-pro-root: "#{$fonts-root}/source-sans-pro" !default;
+$fa-font-path: "#{$fonts-root}/font-awesome" !default;
+$material-icons-root: "#{$fonts-root}/material-icons" !default;
+
+@import "source-sans-pro/source-sans-variable.scss";
+@import "source-sans-pro/source-sans-pro.scss"; /* fallback in case of issues with variable font support */
+@import "material-icons/material-icons.scss";

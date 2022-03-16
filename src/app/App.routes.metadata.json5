@@ -1,0 +1,482 @@
+{
+  "$schema": "../../../../platform/@jutro/uimetadata/common/json-schema/metadata.schema.json",
+  "jutro": "6.5.1",
+  "routes": [
+    {
+      "path": "/",
+      "exact": true,
+      "component": "landingpage",
+      "title": {
+        "id": "gateway.views.dashboard.title",
+        "defaultMessage": "Dashboard"
+      }
+    },
+    {
+      "path": "/accounts",
+      "exact": true,
+      "component": "accounts",
+      "title": {
+        "id": "app.html.index.Accounts",
+        "defaultMessage": "Accounts"
+      }
+    },
+    {
+      "path": "/policies",
+      "exact": true,
+      "component": "policies",
+      "title": {
+        "id": "app.html.index.Policies",
+        "defaultMessage": "Policies"
+      }
+    },
+    {
+      "path": "/claims",
+      "exact": true,
+      "component": "claimslanding",
+      "title": {
+        "id": "app.html.index.Claims",
+        "defaultMessage": "Claims"
+      },
+      "componentProps": {
+        "capability": {
+          "name": "claim"
+        }
+      }
+    },
+    {
+      "path": "/activities",
+      "component": "activities",
+      "title": {
+        "id": "app.html.index.Activities",
+        "defaultMessage": "Activities"
+      }
+    },
+    {
+      "path": "/analytics",
+      "exact": true,
+      "component": "analytics",
+      "title": {
+        "id": "app.html.index.Analytics",
+        "defaultMessage": "Analytics"
+      },
+      "showOnNavBar": false
+    },
+    {
+      "path": "/commission",
+      "exact": true,
+      "component": "commissionlanding",
+      "title": {
+        "id": "app.html.index.Commission",
+        "defaultMessage": "Commission"
+      },
+      "componentProps": {
+        "capability": {
+          "name": "commission"
+        }
+      },
+      "showOnNavBar": false
+    },
+    {
+      "path": "/claims/:claimNumber",
+      "exact": true,
+      "component": "claimdetails",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "claim"
+        }
+      }
+    },
+    {
+      "path": "/accounts/:accountNumber",
+      "component": "accountdetails",
+      "showOnNavBar": false
+    },
+    {
+      "path": "/policies/:policyNumber",
+      "component": "policydetails",
+      "showOnNavBar": false
+    },
+    {
+      "path": "/new-quote",
+      "exact": true,
+      "component": "newquotepage",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "quote"
+        }
+      }
+    },
+    {
+      "path": "/new-quote-account-search",
+      "exact": true,
+      "component": "newquoteaccountsearch",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "quote"
+        }
+      }
+    },
+    {
+      "path": "/new-quote/:accountNumber",
+      "exact": true,
+      "component": "newquotepage",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "quote"
+        }
+      }
+    },
+    {
+      "path": "/quote-cp",
+      "component": "pecpWizard",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "quote",
+          "lob": "cp"
+        }
+      }
+    },
+    {
+      "path": "/quote-wc7",
+      "component": "pewc7wizard",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "quote",
+          "lob": "wc7"
+        }
+      }
+    },
+    {
+      "path": "/quote-pa",
+      "component": "pepaWizard",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "quote",
+          "lob": "pa"
+        }
+      }
+    },
+    {
+      "path": "/quote-ho",
+      "component": "pehoWizard",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "quote",
+          "lob": "ho"
+        }
+      }
+    },
+    {
+      "path": "/quote-bop",
+      "component": "pebopWizard",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "quote",
+          "lob": "bop"
+        }
+      }
+    },
+    {
+      "path": "/endorsement-pa",
+      "component": "papolicychangewizard",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "policychange",
+          "lob": "pa"
+        }
+      }
+    },
+    {
+      "path": "/endorsement-ho",
+      "component": "hopolicychangewizard",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "policychange",
+          "lob": "ho"
+        }
+      }
+    },
+    {
+      "path": "/endorsement-cp",
+      "component": "cppolicychangewizard",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "policychange",
+          "lob": "cp"
+        }
+      }
+    },
+    {
+      "path": "/endorsement-bop",
+      "component": "boppolicychangewizard",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "policychange",
+          "lob": "bop"
+        }
+      }
+    },
+    {
+      "path": "/renewal-cp",
+      "component": "cppolicyrenewalwizard",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "renewal",
+          "lob": "cp"
+        }
+      }
+    },
+    {
+      "path": "/renewal-bop",
+      "component": "boppolicyrenewalwizard",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "renewal",
+          "lob": "bop"
+        }
+      }
+    },
+    {
+      "path": "/fnol-select-policy",
+      "component": "basefnolwizard",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "fnol"
+        }
+      }
+    },
+    {
+      "path": "/fnol-ho",
+      "component": "fnolhowizard",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "fnol",
+          "lob": "ho"
+        }
+      }
+    },
+    {
+      "path": "/fnol-pa",
+      "component": "fnolpawizard",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "fnol",
+          "lob": "pa"
+        }
+      }
+    },
+    {
+      "path": "/fnol-ca",
+      "component": "fnolcawizard",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "fnol",
+          "lob": "ca"
+        }
+      }
+    },
+    {
+      "path": "/fnol-cp",
+      "component": "fnolcpwizard",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "fnol",
+          "lob": "cp"
+        }
+      }
+    },
+    {
+      "path": "/fnol-wc",
+      "component": "fnolwcwizard",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "fnol",
+          "lob": "wc"
+        }
+      }
+    },
+    {
+      "path": "/fnol-bop",
+      "component": "fnolbopwizard",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "fnol",
+          "lob": "bop"
+        }
+      }
+    },
+    {
+      "path": "/fnol-gl",
+      "component": "fnolgeneralwizard",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "fnol",
+          "lob": "gl"
+        }
+      }
+    },
+    {
+      "path": "/fnol-im",
+      "component": "fnolgeneralwizard",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "fnol",
+          "lob": "im"
+        }
+      }
+    },
+    {
+      "path": "/confirmation/:claimNumber",
+      "component": "claimsconfirmationpage",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "fnol"
+        }
+      }
+    },
+    {
+      "path": "/contact-agent",
+      "component": "contactagentpage",
+      "showOnNavBar": false
+    },
+    {
+      "path": "/contact-agent/:claimNumber",
+      "component": "contactagentpage",
+      "showOnNavBar": false
+    },
+    {
+      "path": "/search/:searchText",
+      "exact": true,
+      "component": "searchresults",
+      "showOnNavBar": false
+    },
+    {
+      "path": "/preferences",
+      "exact": true,
+      "component": "preferences",
+      "showOnNavBar": false
+    },
+    {
+      "path": "/faq",
+      "component": "faqpage",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "faq"
+        }
+      }
+    },
+    {
+      "path": "/quotes/:jobNumber",
+      "component": "quotedetails",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "quote"
+        }
+      }
+    },
+    {
+      "path": "/renewal/:jobNumber",
+      "component": "renewal",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "renewal"
+        }
+      }
+    },
+    {
+      "path": "/change/:jobNumber",
+      "component": "endorsement",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "policychange"
+        }
+      }
+    },
+    {
+      "path": "/cancellation/:jobNumber",
+      "component": "cancellation",
+      "showOnNavBar": false
+    },
+    {
+      "path": "/accounts/:accountNumber/billingAndPayment",
+      "exact": true,
+      "component": "accountbillingandpayment",
+      "showOnNavBar": false
+    },
+    {
+      "path": "/pay-invoices/billed/:accountNumber",
+      "exact": true,
+      "component": "makepayment",
+      "showOnNavBar": false
+    },
+    {
+      "path": "/contactAgent/:policyNumber",
+      "exact": true,
+      "component": "contactunderwriter",
+      "showOnNavBar": false
+    },
+    {
+      "path": "/make-payment-confirmation/:accountNumber",
+      "exact": true,
+      "component": "paymentconfirmation",
+      "showOnNavBar": false
+    },
+    {
+      "path": "/knockoutpage",
+      "exact": true,
+      "component": "knockoutpage",
+      "showOnNavBar": false
+    },
+    {
+      "path": "/PolicyDocumentError.html",
+      "exact": true,
+      "component": "policydocumenterror",
+      "showOnNavBar": false,
+      "componentProps": {
+        "capability": {
+          "name": "document"
+        }
+      }
+    },
+    {
+      "path": "/quoteflow",
+      "component": "policytransactionpage",
+      "showOnNavBar": false
+    },
+    // As a fallback route, this route must be kept at the end.
+    {
+      "path": "/",
+      "showOnNavBar": false,
+      "redirect": "/"
+    }
+  ]
+}

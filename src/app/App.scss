@@ -1,0 +1,94 @@
+// initialize the helpers here
+// ....
+// end initialization
+
+@import "../generated/styles/style-tools.scss";
+
+// customize the styles here
+// ...
+// end customziation
+
+@import "../generated/styles/styles.scss";
+@import "~gw-capability-gateway-react/gateway-styles";
+
+:root {
+  --gw-producer-engage-container-max-width: 90em;
+  --gw-producer-engage-container-width: 90%;
+  --gw-producer-table-icon-spa: 4px;
+  --gw-main-container-padding: 180px;
+  --gw-sub-title-padding-bottom: var(--GW-SPACING-4);
+  --gw-tablet-sidebar-width: 20rem;
+}
+
+html,
+body {
+  --gw-header-image: url("../../public/branding/logo-version-agents.svg");
+  --gw-header-mobile-image: url("../../public/branding/logo-mobile.svg");
+
+  height: 100%;
+}
+
+table[class*='tableElement'] {
+  a {
+    text-decoration: none;
+    color: var(--GW-LINK-COLOR);
+  }
+
+  i {
+    margin-right: var(--gw-producer-table-icon-spa);
+  }
+}
+
+.jut__FieldComponent__left .jut__FieldLabel__left {
+  flex: 1 1 0;
+  align-items: flex-start;
+  height: auto;
+  text-align: left;
+
+  .jut__FieldLabel__fieldLabel {
+    margin-right: var(--GW-SPACING-4);
+  }
+}
+
+.jut__Accordion__accordionToggle {
+  height: auto;
+}
+
+.tilesContainer {
+  padding-bottom: var(--GW-LAYOUT-4);
+}
+
+.jut__ModalNext__modal {
+  --gw-modal-max-height: 90vh;
+
+  > * {
+    max-height: var(--gw-modal-max-height);
+  }
+}
+
+
+.appHeader {
+  --application-header-logo-size: 48px;
+  --header-button-focus-border-size: var(--GW-BORDER-WIDTH);
+
+  [class*='applicationLogoTitleLink'] {
+    border: none;
+
+    &:active,
+    &:hover {
+      background: none;
+    }
+
+    &:focus {
+      border: none;
+      box-shadow: none;
+    }
+  }
+
+  [class*='jut__Avatar__small'] {
+    --avatar-width-height: 40px;
+
+    height: var(--avatar-width-height);
+    width: var(--avatar-width-height);
+  }
+}

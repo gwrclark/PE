@@ -1,0 +1,99 @@
+{
+  "quote": {
+    "common": {
+      "baseData": {
+        "accountHolder": {
+          "emailAddress1": "dummy@email.dummy",
+          "accountHolder": true
+        },
+        "policyAddress": {
+          "addressLine1": "0streamlinedquote0",
+          "state": "CA",
+          "city": "0streamlinedquote0",
+          "postalCode": "94044",
+          "country": "US"
+        }
+      },
+      "bindData": {
+        "contactPhone": "650-357-9100"
+      }
+    },
+    "bop": {
+      "baseData": {
+        "productCode": "BusinessOwners",
+        "accountHolder": {
+          "subtype": "Company",
+          "contactName": "0dummyname0",
+          "emailAddress1": "dummy@email.dummy"
+        }
+      },
+      "bindData": {
+        "contactEmail": "dummy@email.dummy"
+      },
+      "lobData": {
+        "businessOwners": {
+          "accountOrgType": "commonownership",
+          "smallBusinessType": "apartment"
+        }
+      }
+    },
+    "ho": {
+      "baseData": {
+        "productCode": "Homeowners",
+        "accountHolder": {
+          "firstName": "0dummyname0",
+          "lastName": "0dummyname0",
+          "subtype": "Person"
+        }
+      }
+    },
+    "pa": {
+      "baseData": {
+        "productCode": "PersonalAuto",
+        "accountHolder": {
+          "firstName": "0dummyname0",
+          "lastName": "0dummyname0",
+          "subtype": "Person",
+          "dateOfBirth": {
+            "day": 1,
+            "month": 1,
+            "year": 1880
+          }
+        }
+      },
+      "bindData": {
+        "contactEmail": "dummy@email.dummy"
+      }
+    },
+    "cp": {
+      "baseData": {
+        "productCode": "CommercialProperty",
+        "accountHolder": {
+          "firstName": "0dummyname0",
+          "lastName": "0dummyname0",
+          "subtype": "Person",
+          "dateOfBirth": {
+            "day": 1,
+            "month": 1,
+            "year": 1880
+          }
+        }
+      }
+    },
+    "wc7": {
+      "baseData": {
+        "productCode": "WC7WorkersComp",
+        "accountHolder": {
+          "firstName": "0dummyname0",
+          "lastName": "0dummyname0",
+          "subtype": "Person",
+          "dateOfBirth": {
+            "day": 1,
+            "month": 1,
+            "year": 1880
+          }
+        }
+      }
+    }
+  }
+}

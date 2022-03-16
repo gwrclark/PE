@@ -1,0 +1,373 @@
+{
+  // app configuration
+  // here you can override/add any settings that will be included into the src/generated/config.json
+  "applicationDetails":  {
+    "applicationName": "ProducerEngage",
+    "applicationLogo": "branding/logo-mobile.svg"
+  },
+  "localisation": {
+    "languageVariant": "EDG",
+    "endpoint": {
+      "pc": "gatewaylocale/locale"
+    }
+  },
+  "productName": "ProducerEngage",
+  "phoneNumber": "1-800-555-0199",
+  "supportPhone": "800-555-1212",
+  "assistNumber": "1-866-555-0124",
+  "documentNotFoundRedirectUrl": "PolicyDocumentError",
+  "personalAutoConfig": {
+    "ageAllowedToDrive": 16,
+    "oldestCarYear": 1908
+  },
+  "gatewayParamConfig": {
+    "jobsCreatedInLastXDays": 30,
+    "claimsCreatedInLastXDays": null,
+    "accountsCreatedInLastXDays": null,
+    "policiesCreatedInLastXDays": 90,
+    "cpPropertiesPerPage": 50,
+    "landingOrderBy": "CreateTime",
+    "landingOrderByDescending": true
+  },
+  // This block is used to configure the capabilities that
+  // are available in the application
+  // The content of this block indicates the following:
+  // - the capability is absent -> the capability is disabled
+  // - the capability is valued to false -> the capability is disabled
+  // - the capability is valued to an empty array -> only the common parts of capability are enabled (no LOB specific)
+  // - the capability is valued to an array of strings -> only the LOBs (strings) indicated will be enabled together with the common modules
+  // - the capability is valued to true -> all of the LOBs are enabled (and the common modules)
+  // for example:
+  // "quote": [ "pa", "ho", "bop", "cp", "wc7" ],
+  // is equivalent to
+  // "quote": true,
+  // if the only  "pa", "ho", "bop", "cp", "wc7" and "bop" exist as lines of business.
+  "capabilitiesConfig": {
+    "address": true,
+    "account": true,
+    "billing": true,
+    "claim": true,
+    "claimdocument": true,
+    "commission": true,
+    "document": true,
+    "driverlicense": true,
+    "faq": true,
+    "fnol": true,
+    "gateway": true,
+    "googleplaces": false,
+    "journey": true,
+    "policy": true,
+    "policychange": ["pa", "ho", "cp"],
+    "policycommon": true,
+    "policydocument": true,
+    "policyjob": [],
+    "profileinfo": true,
+    "propertycode": true,
+    "quote": ["pa", "ho", "cp"],
+    "renewal": ["pa", "ho", "cp"],
+    "segmentation": false,
+    "spreadsheet": true,
+    "vehicleinfo": true,
+    "vendor": false
+  },
+  "allowedPolicyTypes":[
+    "PersonalAuto",
+    "PersonalAutoLine",
+    "auto_per",
+    "Homeowners",
+    "HomeownersLine_HOE",
+    "HOPHomeowners",
+    "HOPLine",
+    "HOLine",
+    "GeneralLiability",
+    "GeneralLiabilityLine",
+    "GLLine",
+    // "BusinessOwners",
+    // "BusinessOwnersLine",
+    // "BOPLine",
+    "InlandMarine",
+    "InlandMarineLine",
+    "IMLine",
+    "CommercialProperty",
+    "CommercialPropertyLine",
+    "CPLine",
+    "CommercialAuto",
+    "BusinessAuto",
+    "BusinessAutoLine",
+    "WorkersComp",
+    "WorkersCompLine"
+  ],
+  "browserBlacklist": {},
+
+  "mediaSidebar": {
+    "enabled": true,
+    "Text": {
+      "enabled": false,
+      "configuration": {
+        /*
+        * Custom Text module.
+        * Enter section object into sections array with id, title,
+        * content and optional link object.
+        * If Link object entered it must contain a url and name.
+        */
+        "sections": [
+          {
+            "id": "media_sidebar.text.sections.media_sidebar_example",
+            "title": { "id":"media_sidebar.text.sections.media_sidebar_example.title", "defaultMessage": "Got a Question?" },
+            "content": {
+              "id": "media_sidebar.text.sections.media_sidebar_example.content",
+              "defaultMessage": "Our FAQ page contains answers to the questions we get asked the most. Find out if your question is included there."
+            },
+            "link": {
+              "url": "/faq/",
+              "name": {
+                "id": "media_sidebar.text.sections.media_sidebar_example.link_name",
+                "defaultMessage": "FAQ"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "Contact": {
+      "enabled": false,
+      "configuration": {
+        // Any of keys may be omitted
+        // "displayName": "Sam Smith",
+        // "userType": "",
+        // "city": "San Francisco",
+        // "phoneNumber": "213-555-8164",
+        // "email": "SSmith@FoundationInsurance.com",
+
+        // Image url
+        // Expected to be 64x64px, larger images would be scaled then cropped.
+        // Placeholder icon is used if image is not provided
+        // "image": "/contact/contact-avatar.png"
+      }
+    },
+    "Facebook": {
+      "enabled": true,
+      "configuration": {
+        "facebookHandle": "GuidewireSoftware",
+        "showSmallHeader": false,
+        "hideCoverPhoto": false,
+        "showFacepile": true,
+        "showPosts": true,
+        "tabs": "timeline, messages" // could be "timeline, events, messages"
+      }
+    },
+    "Twitter": {
+      "enabled": false,
+      "configuration": {
+        "dataSource": {
+          "sourceType": "profile",
+          "screenName": "Guidewire_PandC"
+        }, // widgetID deprecated https://twittercommunity.com/t/deprecating-widget-settings/102295
+        "tweetLimit": 3 // May be ommited or set to undefined for scrollable timeline
+      }
+    },
+    "Youtube": {
+      "enabled": true,
+      "configuration": {
+        "type": "user", // one of: user, video or playlist
+        "id": "GuidewireVideo", // Username, video id or playlist id depending on type above
+        "autoplay": false,
+        "controls": false
+      }
+    },
+    "Rss": {
+      "enabled": false,
+      "configuration": {
+        /*
+          It may be impossible to request some feeds directly from client
+          due to CORS configuration.
+          If the feed is under your control, specify your domain under
+          Access-Control-Allow-Origin response header.
+          Otherwise, configure http server to proxy requests to the feed.
+          Make sure to explicitly specify urls you're proxying to avoid creating an open proxy.
+          Here's an example for Apache:
+
+          ProxyPassMatch '^/rss/guidewire/.+$' !
+          ProxyPass /rss/guidewire/ https://ir.guidewire.com/corporate.rss?c=248177&Rule=Cat=news~subcat=ALL connectiontimeout=5 timeout=30
+        */
+        "feed": "/rss/guidewire/", // Supports both Rss 2.0 and Atom feeds
+        "limit": 5 // Max entries to show
+      }
+    }
+  },
+  "showQuoteStartDateInHeader": false,
+  "gatewayAnalytics": true,
+  "sessionConfig": {
+    "inactivityIntervalMins": 20,
+    "logoutConfirmationIntervalMins": 1
+  },
+  "defaultLocaleDetails": {
+    "mapCenter": {
+      "lat": 37.5549479,
+      "lon": -122.27106019999997
+    }
+  },
+  "credentials": {
+    "FACEBOOK_APP_ID": "{{FACEBOOK_APP_ID}}",
+    "CAPTCHA_API_KEY": "{{CAPTCHA_API_KEY}}",
+    "GOOGLE_MAPS_API_KEY": "{{GOOGLE_MAPS_API_KEY}}"
+  },
+  "googleMaps": {
+    "libraries": "geometry,places",
+    "version": "3.exp"
+  },
+  "fixedPCJobURL": false,
+  "authentication": {
+    "authServer": "okta",
+    "signUpAllowed": false,
+    "forgotPasswordAllowed": false,
+    "socialLoginAllowed": false,
+    "reloadOnLogout": true,
+    "initialLoginRequired": true,
+    "xcenterAuthenticationRequired": true,
+    "servers": {
+      "okta": {
+        "JUTRO_AUTH_ENABLED": true,
+        "JUTRO_AUTH_ISSUER": "https://dev-76206058.okta.com/oauth2/default",
+        "JUTRO_AUTH_SCOPE": "openid,profile,email,groups,pcUserName,pc_username,lcm.resources.read,tenant_id",
+        "JUTRO_AUTH_CLIENT_ID": "0oa1i6vjvqHMOtvqZ5d7",
+        "JUTRO_AUTH_REDIRECT_BASE": "https://localhost:3000",
+        "JUTRO_AUTH_REDIRECT_PATH": "/callback",
+        "JUTRO_AUTH_PKCE_ENABLED": true,
+        "JUTRO_AUTH_AUTO_RENEW": true
+      }
+    }
+  },
+  "fnolLobs": [
+    "PersonalAuto",
+    "CommercialAuto",
+    "HomeOwners",
+    "GeneralLiability",
+    // "BusinessOwners",
+    "InlandMarine",
+    "WorkersComp",
+    "CommercialProperty"
+  ],
+  "fnolLobsConfig": {
+    "PersonalAuto": ["PersonalAuto", "PersonalAutoLine", "auto_per"],
+    "HomeOwners": ["Homeowners", "homeowners", "HomeownersLine_HOE", "HOPHomeowners", "HOPLine", "HOLine"],
+    "GeneralLiability": ["GeneralLiability", "GeneralLiabilityLine", "GLLine"],
+    // "BusinessOwners": ["BusinessOwners", "BusinessOwnersLine", "BOPLine"],
+    "InlandMarine": ["InlandMarine", "InlandMarineLine", "IMLine"],
+    "CommercialProperty": ["CommercialProperty", "CommercialPropertyLine", "CPLine"],
+    "CommercialAuto": ["CommercialAuto", "BusinessAuto", "BusinessAutoLine"],
+    "WorkersComp": ["WorkersComp", "WorkersCompLine"]
+  },
+  "lobQuoteURL": {
+    "PersonalAuto": "/quote-pa",
+    "Homeowners": "/quote-ho",
+    "HOPHomeowners": "/quote-ho",
+    "CommercialProperty": "/quote-cp",
+    // "BusinessOwners": "/quote-bop",
+    "WC7WorkersComp": "/quote-wc7"
+  },
+  "lobEndorsementURL": {
+    "PersonalAuto": "/endorsement-pa",
+    "Homeowners": "/endorsement-ho",
+    "HOPHomeowners": "/endorsement-ho",
+    "CommercialProperty": "/endorsement-cp",
+    // "BusinessOwners": "/endorsement-bop"
+  },
+  "lobRenewalURL": {
+    "CPLine": "/renewal-cp",
+    // "BOPLine": "/renewal-bop"
+  },
+  "lobRedirectJobURL": {
+    "Submission": "/quotes",
+    "PolicyChange": "/change",
+    "Cancellation": "/cancellation",
+    "Renewal": "/renewal"
+  },
+  "endorsementProducts": [
+    "Homeowners",
+    "HomeownersLine_HOE",
+    "HOPLine",
+    "homeowners",
+    "HOPHomeowners",
+    "HOLine",
+    "PersonalAuto",
+    "PersonalAutoLine",
+    "auto_per",
+    // "BusinessOwners",
+    // "BusinessOwnersLine",
+    // "BOPLine",
+    "CommercialProperty",
+    "CommercialPropertyLine",
+    "CPLine"
+  ],
+  // each proxied URL should follow the specification of https://github.com/chimurai/http-proxy-middleware#options
+  // the "context" property defines the local path that should be proxied
+  // the "config.target" can use placeholders like the following: {{VAR_NAME}} where VAR_NAME is an environment variable
+  // The environment will be inserted in the string replacing the placeholder
+  // {{GW_BC_HOST}}, {{GW_CC_HOST}}, {{GW_PC_HOST}}, {{GW_AB_HOST}} have special meaning and they are derived from the
+  // {{GW_RUN_TIME_HOST}}, but can be specified otherwise in the environment
+  "proxiedUrls": [
+    {
+      "context": "/rss/guidewire",
+      "config": {
+        "target": "http://ir.guidewire.com/rss/news-releases.xml?items=15",
+        "changeOrigin": true,
+        "rewrite": {
+          "/rss/guidewire": ""
+        }
+      }
+    },
+    {
+      "context": "/sso/logout",
+      "config": {
+        "target": "{{GW_PC_HOST}}/service",
+        "secure": false,
+        "autoRewrite": true
+      }
+    },
+    {
+      "context": "/pc",
+      "config": {
+        "target": "{{GW_PC_HOST}}",
+        "secure": false,
+        "autoRewrite": true,
+        "pathRewrite": {
+          "^/pc": ""
+        },
+        "cookieDomainRewrite": {
+          "{{GW_PC_DOMAIN}}": "{{GW_RUN_TIME_DEPLOYMENT_DOMAIN}}"
+        },
+        "cookiePathRewrite": {
+          "/xcenter/pc": "{{GW_RUN_TIME_DEPLOYMENT_PATH}}/pc"
+        },
+        "custom": {
+          "substitute": {
+            "https?://[^/]*/xcenter/pc/": "{{GW_RUN_TIME_DEPLOYMENT_PATH}}/pc/"
+          },
+          "replaceRedirect": {
+            "^/xcenter/pc": "{{GW_RUN_TIME_DEPLOYMENT_PATH}}/pc"
+          }
+        }
+      }
+    }
+  ],
+  "flowStepsValidationEnabled": true,
+  "microAppConfig": {
+    "remotes": {
+      "policy-transaction": "{{POLICY_TRANSACTION_MICROAPP_REMOTE_URL}}"
+    }
+  },
+  "policyTransactionMicroAppConfig": {
+    // Format: "productcode1;productcode2;productcode3"
+    "APD_LOBS": "{{APD_LOBS}}",
+    "APD_LOB_QUOTE_URL": "/quoteflow",
+    "POLICY_TRANSACTION_TENANT": "{{POLICY_TRANSACTION_TENANT}}",
+    "GRN": "{{GRN}}",
+    "PC_API_URL": "{{GW_RUN_TIME_HOST_PC}}",
+    "WORKSET_ID": "{{WORKSET_ID}}",
+    // Format: "productcode1:experienceId1;productcode2:experienceId2;productcode3:experienceId3"
+    "EXPERIENCE_IDS": "{{EXPERIENCE_IDS}}",
+    "MICROAPP_ADMIN_SERVICE_URL": "{{MICROAPP_ADMIN_SERVICE_URL}}",
+    "MICROAPP_ADMIN_SERVICE_API_VERSION": "v1"
+  }
+}
