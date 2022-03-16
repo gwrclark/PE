@@ -24,3 +24,4 @@ tsconfig.app.json
 common/
 .jutro/
 biz-comp-translations/
+node_modules/
